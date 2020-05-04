@@ -6,6 +6,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Login from '../views/Login.vue'
 import Menu from '../views/Menu.vue'
+import FiltroMaster from '../components/FiltroMaster.vue'
 //import ReporteVenta from '../views/Ventas/ReporteVenta.vue'
 
 
@@ -15,8 +16,10 @@ const routes = [
   //{path: '/', name: 'Home',component: Home },
   {path: '/',name: 'Login',component: Login  },
   {path: '/menu',name: 'Menu',component: Menu,meta:{requireAuth:true}/*,children:[{ path: 'reporteVenta', component: ReporteVenta }]*/},
-  {path: '/about',name: 'About',component:About}
+  {path: '/about',name: 'About',component:About},
+  {path: '/FiltroMaster',name: 'FiltroMaster',component:FiltroMaster}
 ]
+
 
 const router = new VueRouter({
   mode: 'history',

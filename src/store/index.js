@@ -8,7 +8,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     token: null,
-    usuario: null//,isAuthenticated:false
+    usuario: null,//,isAuthenticated:false
+    bodega:[],//datos a pasar   desde el componente FiltroMaster a  cualquier componente
+    producto:[],//datos a pasar   desde el componente FiltroMaster a  cualquier componente
   },
   mutations: {
     setToken(state,token){
@@ -16,7 +18,15 @@ export default new Vuex.Store({
     },
     setUsuario (state,usuario){
       state.usuario=usuario
-    }
+    },
+    // seteamos  en una funcion los objetos // mutamos el objeto 
+      setBodega(state,bodega){
+        state.bodega=bodega
+      },
+      setProducto(state,producto){      
+        state.producto=producto
+      }
+
   },
   actions: {
     guardarToken({commit},token){
@@ -85,7 +95,17 @@ export default new Vuex.Store({
       localStorage.removeItem("token")
       localStorage.removeItem("usuario")
       router.push({name: 'Login'})
+    },
+
+    // guardamos cambio de de la mutacion 
+    guardarProducto({commit},producto){
+      commit("setProducto", producto);
+    },
+    guardarBodega({commit},bodega){
+      commit("setBodega", bodega);
     }
+
+    
   },
   modules: {
     doneTodos: state => {
