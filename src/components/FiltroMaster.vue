@@ -1,43 +1,29 @@
 
-                        
-                        <!--
-                         sm="6" 
-                        md="6"
-                          solo-inverted
-                          flat
-                          hide-details
-                          label="Buscar"
-                          prepend-inner-icon="mdi-magnify"    
-                        
-                        
-                        -->
+      <template>             
 
 
-                        <template>                                 
+<v-row>
+<v-col class="pa-1" sx10>
+
                                 <v-autocomplete
                                 v-model="model"
                                 :items="items"
                                 :loading="isLoading"
                                 :search-input.sync="search"
-
-                                chips 
-
-
-
-                                clearable
-                         
-                                
+                                clearable                       
                                 item-text="name"
                                 item-value="symbol"
-
+                                dense
                                 label="Buscar"
                                 prepend-inner-icon="mdi-magnify" 
                                 solo
-                                xs12
+                                hide-details
                                 >
 
+                                
+
                                 <template v-slot:no-data>
-                                    <v-list-item>
+                                    <v-list-item>s
                                     <v-list-item-title>
                                         Busque su bodega
                                         <strong>favorita</strong>
@@ -117,34 +103,39 @@
                                       <v-icon>mdi-magnify-plus</v-icon>
                                     </v-btn>
 
-                                    <v-btn icon color="deep-orange">
-                                      <v-icon>mdi-thumb-up</v-icon>
+                                    <v-btn icon color="deep-orange" @click="agregarPedido(item)">
+                                      <v-icon>mdi-cart-arrow-down</v-icon>
                                     </v-btn>
                                     
-                                    
-                                  
-                                    <!--
-                                    <v-list-item-avatar
-                                      color="indigo" >
-                                       
-                                     <v-list-item-icon>
-                                    <v-icon>mdi-plus-circle</v-icon>
-                                    </v-list-item-icon>
-                                    </v-list-item-avatar>
-                                      -->
-
-
                                 </template>
                                 </v-autocomplete>
 
+</v-col>
+<v-col sx2  class="pa-1" >   
+      <div class="px-0 py-0" sx1>
+
+                  <v-btn color="primary" fab  x-small dark>
+                  <v-icon>mdi-home-flood</v-icon>
+                  </v-btn>  
+              
+
+                  <v-btn color="primary" fab  x-small dark>
+                  <v-icon>mdi-shopping</v-icon>
+               
+      </div> 
+ </v-col>
+</v-row>
+
+       
+       </template>
+
     
-                        </template>
+
+     
 
 
 
-
-
-
+                        
 
 
 <script>
@@ -159,6 +150,20 @@
 
     }),
 
+    methods:{
+      agregarPedido(bs){
+
+        Console.log('ingreso');
+
+      },
+      agregarMisFavoritos(){
+         Console.log();
+        
+      },
+      agregarMisFavoritos(){
+        Console.log();
+      }
+    },
     watch: {
       model (val) {
         if (val != null) this.tab = 0

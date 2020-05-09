@@ -18,6 +18,8 @@
                   <v-text-field  solo single-line outlined  v-model="password"  id="password"  @ v-on:keyup.enter="ingresar"  prepend-inner-icon="mdi-lock" name="password" label="Password" type="password"></v-text-field>
                  <v-spacer></v-spacer>
                   <v-btn block   color="primary" v-on:click="ingresar" >Iniciar Sesión</v-btn>
+
+                  <p></p>
                 </v-form>
               </v-card-text>
               <v-card-actions >  

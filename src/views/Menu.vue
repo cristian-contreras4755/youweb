@@ -127,26 +127,45 @@
 
     </v-navigation-drawer>
 
-    <v-app-bar app clipped-left>
+    <v-app-bar app clipped-left   height="100px">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     <v-spacer></v-spacer>
-     
 
-<v-container>
-  <v-row>
-            <v-col  xs12 sm12 lg6>
-              <FiltroMaster/> 
-            </v-col>
-     
-            <div  class="py-4">
-                <v-btn color="primary" fab  x-small dark>
-              <v-icon>mdi-movie-filter</v-icon>
-            </v-btn>
-            </div>            
-            
+  <FiltroMaster></FiltroMaster>
+
+  
+<!--
+    <v-row class="pt-0"  >
+            <div sx10>
+            <FiltroMaster></FiltroMaster>
+           </div>
+        
+              <div class="px-2 py-2" sx1>
+                  <v-btn color="primary" fab  x-small dark>
+                  <v-icon>mdi-home-flood</v-icon>
+                  </v-btn>  
+              </div> 
+
+                <div class="py-2" sx1>
+                  <v-btn color="primary" fab  x-small dark>
+                  <v-icon>mdi-shopping</v-icon>
+                  </v-btn>  
+              </div> 
+        
     </v-row>
-</v-container>
-       
+
+-->
+
+           
+
+       <v-btn icon @click="cerrarSession">
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+         
+
+         
+
+          
 
 <!--
            
@@ -180,7 +199,7 @@
        
 
      
-      <v-spacer></v-spacer>
+  
 
      
 <!--
@@ -188,9 +207,7 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 -->
-      <v-btn icon @click="cerrarSession">
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+     
 
 
 <!--
@@ -207,20 +224,16 @@
     </v-app-bar>
 
     <v-content>
-      <v-container>
 
-<!-- contenedor de menu principal         <Dashboard></Dashboard> -->
+
+   <!--<v-container dense>    </v-container>   tag para   dar un padiong al contenedor-->   
 
       
+     <PanelPedido/>
+
+     
 
 
-
-
-
-
-
-
-      </v-container>
     </v-content>
     <v-footer app>
       <span>&copy; 2020</span>
@@ -231,9 +244,12 @@
 <script>
 import Dashboard from '../views/Dashboard'
 import FiltroMaster from '../components/FiltroMaster.vue'
+import PanelPedido from '../components/Pedido/PanelPedido.vue'
+
   export default {
      components: {
          Dashboard,
+         PanelPedido,
          FiltroMaster
      },
     props: {

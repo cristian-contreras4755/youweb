@@ -41,7 +41,9 @@
 
  -->
 
-       <v-container fluid >
+<!-- al quitar  el container fluid el contenedor  ocupa  un pading al ear con fluid-->
+
+       <v-container fluid  class="px-0"   >
             <router-view/>
       </v-container>   
 
