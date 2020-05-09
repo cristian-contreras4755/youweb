@@ -2,9 +2,6 @@
       <template>             
 
 
-<v-row>
-<v-col class="pa-1" sx10>
-
                                 <v-autocomplete
                                 v-model="model"
                                 :items="items"
@@ -109,23 +106,6 @@
                                     
                                 </template>
                                 </v-autocomplete>
-
-</v-col>
-<v-col sx2  class="pa-1" >   
-      <div class="px-0 py-0" sx1>
-
-                  <v-btn color="primary" fab  x-small dark>
-                  <v-icon>mdi-home-flood</v-icon>
-                  </v-btn>  
-              
-
-                  <v-btn color="primary" fab  x-small dark>
-                  <v-icon>mdi-shopping</v-icon>
-               
-      </div> 
- </v-col>
-</v-row>
-
        
        </template>
 

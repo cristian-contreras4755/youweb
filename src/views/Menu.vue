@@ -127,37 +127,32 @@
 
     </v-navigation-drawer>
 
-    <v-app-bar app clipped-left   height="100px">
+    <v-app-bar app clipped-left  >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     <v-spacer></v-spacer>
 
-  <FiltroMaster></FiltroMaster>
+  <div justify-center>
+      <v-row >
 
-  
-<!--
-    <v-row class="pt-0"  >
-            <div sx10>
-            <FiltroMaster></FiltroMaster>
-           </div>
-        
-              <div class="px-2 py-2" sx1>
-                  <v-btn color="primary" fab  x-small dark>
-                  <v-icon>mdi-home-flood</v-icon>
-                  </v-btn>  
-              </div> 
+        <v-col class="px-0" xs12 >
+          <FiltroMaster></FiltroMaster>
+        </v-col>
 
-                <div class="py-2" sx1>
-                  <v-btn color="primary" fab  x-small dark>
-                  <v-icon>mdi-shopping</v-icon>
-                  </v-btn>  
-              </div> 
-        
-    </v-row>
+              <div class="pt-4  px-1  py-0 mx-0 my-0" >
+              <v-btn color="primary" fab  x-small dark>
+              <v-icon>mdi-home-flood</v-icon>
+              </v-btn>  
 
--->
+              <v-btn color="primary" class="mx-1" fab  x-small dark>
+              <v-icon>mdi-shopping</v-icon>
+              </v-btn>  
+            </div>
+              
 
-           
+      </v-row>
+    </div>
 
+  <v-spacer></v-spacer>
        <v-btn icon @click="cerrarSession">
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
@@ -167,36 +162,6 @@
 
           
 
-<!--
-           
-
-            <v-col xs1 sm1 md1>
-
-               <div class="py-2" >
-                <v-btn color="primary" fab  x-small dark>
-                   <v-icon>mdi-pencil</v-icon>
-                </v-btn>
-             </div>    
-           </v-col>
-         -->  
-
-
-          <!--
-          <v-col cols="12" >
-          <v-text-field
-                        sm="6" 
-                        md="6"
-                          solo-inverted
-                          flat
-                          hide-details
-                          label="Buscar"
-                          prepend-inner-icon="mdi-magnify"                 
-                        />
-
-          </v-col>  
--->
-
-       
 
      
   
