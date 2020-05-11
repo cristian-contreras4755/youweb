@@ -183,13 +183,12 @@
                   <v-spacer></v-spacer>
                     <v-row>
 
-
                       <div  class="my-2 mx-2">
-                        <v-btn  large  color="warning" dark> <!-- <div class="hidden-sm-and-down">Pedidos en curso</div> -->   Recoger tienda </v-btn>
+                        <v-btn  large  color="warning" dark> Recoger <div class="hidden-sm-and-down small">tienda</div> </v-btn>                        
                       </div>
                     
                       <div class="my-2 mx-2">
-                          <v-btn large  color="warning" dark>solicitar delivery</v-btn>
+                          <v-btn large  color="warning" dark> <div class="hidden-sm-and-down  small">Solicitar</div> delivery</v-btn>
                       </div>
                   </v-row>
               </v-card-actions>
@@ -268,61 +267,61 @@
       initialize () {
         this.desserts = [
           {
-            producto: 'Frozen Yogurt',
+            producto: 'ACEITE GIRASOL COCINERO PET X 1.5 LT',
             cantidad: 159,
             precio: 6.0,
             id: 24
           },
           {
-            producto: 'Ice cream sandwich',
+            producto: 'ACEITE GIRASOL LEGITIMO PET X 900 CC',
             cantidad: 237,
             precio: 9.0,
             carbs: 37
           },
           {
-            producto: 'Eclair',
+            producto: 'ACEITUNAS VERDES DESCAROZADAS CASTELL DP X 80 GRS',
             cantidad: 262,
             precio: 16.0,
             id: 23
           },
           {
-            producto: 'Cupcake',
+            producto: 'ACEITUNAS VERDES DSCRZDS DOY PCK YOVINESSA X150GRS',
             cantidad: 305,
             precio: 3.7,
             id: 67
           },
           {
-            producto: 'Gingerbread',
+            producto: 'AGUA SABORIZADA NARANJA SIN GAS AQUARIUS X 500 CC',
             cantidad: 356,
             precio: 16.0,
             carbs: 49
           },
           {
-            producto: 'Jelly bean',
+            producto: 'ANANA EN RODAJAS LIGHT CANALE X 825 GRS',
             cantidad: 375,
             precio: 0.0,
             id: 94
           },
           {
-            producto: 'Lollipop',
+            producto: 'ARROLLADO RELLENO DULCE DE LECHE BLANCO ROLL X 6 U',
             cantidad: 392,
             precio: 0.2,
             id: 98
           },
           {
-            producto: 'Honeycomb',
+            producto: 'CEPILLO DENTAL DOBLE ACCION ALCANCE 60M PROX1UNI',
             cantidad: 408,
             precio: 3.2,
             id: 87
           },
           {
-            producto: 'Donut',
+            producto: 'DESODORANTE AEROSOL ROMANTIC SPARK IMPULSE X 53GRS',
             cantidad: 452,
             precio: 25.0,
             id: 51
           },
           {
-            producto: 'KitKat',
+            producto: 'DULCE DE LECHE EST COLONIAL CAL LA SERENISIMAX250G',
             cantidad: 518,
             precio: 26.0,
             id: 65
@@ -360,3 +359,68 @@
     },
   }
 </script>
+<style>
+
+
+.mobile {
+      color: #333;
+    }
+
+    @media screen and (max-width: 768px) {
+      .mobile table.v-table tr {
+        max-width: 100%;
+        position: relative;
+        display: block;
+      }
+
+      .mobile table.v-table tr:nth-child(odd) {
+        border-left: 6px solid deeppink;
+      }
+
+      .mobile table.v-table tr:nth-child(even) {
+        border-left: 6px solid cyan;
+      }
+
+      .mobile table.v-table tr td {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid #f5f5f5;
+        height: auto;
+        padding: 10px;
+      }
+
+      .mobile table.v-table tr td ul li:before {
+        content: attr(data-label);
+        padding-right: .5em;
+        text-align: left;
+        display: block;
+        color: #999;
+
+      }
+      .v-datatable__actions__select
+      {
+        width: 50%;
+        margin: 0px;
+        justify-content: flex-start;
+      }
+      .mobile .theme--light.v-table tbody tr:hover:not(.v-datatable__expand-row) {
+        background: transparent;
+      }
+
+    }
+    .flex-content {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .flex-item {
+      padding: 5px;
+      width: 50%;
+      height: 40px;
+      font-weight: bold;
+    }
+</style>
